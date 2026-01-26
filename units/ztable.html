@@ -1,0 +1,110 @@
+---
+layout: default
+title: "טבלת Z"
+---
+
+<a href="{{ site.baseurl }}/" class="back-home">← חזרה לדף הבית</a>
+
+<h1>טבלת Z - ההתפלגות הנורמלית הסטנדרטית</h1>
+
+<h2>שימוש בטבלה</h2>
+
+<p>טבלת Z נותנת את השטח מתחת לעקומה הנורמלית הסטנדרטית. הטבלה מציגה את $P(Z < z)$ עבור ערכי $z$ שונים.</p>
+
+<h3>כיצד לקרוא את הטבלה</h3>
+<ul>
+<li><strong>שורה:</strong> ספרות שלמות + עשירית (למשל: 1.9)</li>
+<li><strong>עמודה:</strong> מאיות (למשל: 0.06)</li>
+<li><strong>תא:</strong> הסתברות מצטברת $P(Z < z)$ (למשל: עבור $z=1.96$ נקבל 0.9750)</li>
+</ul>
+
+<h2>ערכים קריטיים נפוצים</h2>
+
+<table>
+<tr>
+<th>רמת סמך</th>
+<th>$\alpha$</th>
+<th>$Z_{\alpha/2}$ (דו-צדדי)</th>
+<th>$Z_{\alpha}$ (חד-צדדי)</th>
+</tr>
+<tr>
+<td>90%</td>
+<td>0.10</td>
+<td>1.645</td>
+<td>1.28</td>
+</tr>
+<tr>
+<td>95%</td>
+<td>0.05</td>
+<td>1.96</td>
+<td>1.645</td>
+</tr>
+<tr>
+<td>99%</td>
+<td>0.01</td>
+<td>2.576</td>
+<td>2.33</td>
+</tr>
+</table>
+
+<h2>נוסחאות שימושיות</h2>
+
+<h3>מציאת הסתברויות</h3>
+<ul>
+<li>$P(Z < z)$ - קוראים ישירות מהטבלה</li>
+<li>$P(Z > z) = 1 - P(Z < z)$</li>
+<li>$P(Z < -z) = 1 - P(Z < z)$ (סימטריה)</li>
+<li>$P(a < Z < b) = P(Z < b) - P(Z < a)$</li>
+</ul>
+
+<h3>תקנון</h3>
+<div class="formula-box">
+$$Z = \frac{X - \mu}{\sigma}$$
+</div>
+
+<h3>תקנון הפוך</h3>
+<div class="formula-box">
+$$X = \mu + Z \cdot \sigma$$
+</div>
+
+<h2>טבלת ערכי Z נבחרים</h2>
+
+<div style="overflow-x: auto;">
+<table style="font-size: 0.9em;">
+<tr>
+<th>Z</th>
+<th>0.00</th>
+<th>0.01</th>
+<th>0.02</th>
+<th>0.03</th>
+<th>0.04</th>
+<th>0.05</th>
+<th>0.06</th>
+<th>0.07</th>
+<th>0.08</th>
+<th>0.09</th>
+</tr>
+<tr><td><strong>0.0</strong></td><td>0.5000</td><td>0.5040</td><td>0.5080</td><td>0.5120</td><td>0.5160</td><td>0.5199</td><td>0.5239</td><td>0.5279</td><td>0.5319</td><td>0.5359</td></tr>
+<tr><td><strong>0.1</strong></td><td>0.5398</td><td>0.5438</td><td>0.5478</td><td>0.5517</td><td>0.5557</td><td>0.5596</td><td>0.5636</td><td>0.5675</td><td>0.5714</td><td>0.5753</td></tr>
+<tr><td><strong>0.2</strong></td><td>0.5793</td><td>0.5832</td><td>0.5871</td><td>0.5910</td><td>0.5948</td><td>0.5987</td><td>0.6026</td><td>0.6064</td><td>0.6103</td><td>0.6141</td></tr>
+<tr><td><strong>0.3</strong></td><td>0.6179</td><td>0.6217</td><td>0.6255</td><td>0.6293</td><td>0.6331</td><td>0.6368</td><td>0.6406</td><td>0.6443</td><td>0.6480</td><td>0.6517</td></tr>
+<tr><td><strong>0.4</strong></td><td>0.6554</td><td>0.6591</td><td>0.6628</td><td>0.6664</td><td>0.6700</td><td>0.6736</td><td>0.6772</td><td>0.6808</td><td>0.6844</td><td>0.6879</td></tr>
+<tr><td><strong>0.5</strong></td><td>0.6915</td><td>0.6950</td><td>0.6985</td><td>0.7019</td><td>0.7054</td><td>0.7088</td><td>0.7123</td><td>0.7157</td><td>0.7190</td><td>0.7224</td></tr>
+<tr><td><strong>1.0</strong></td><td>0.8413</td><td>0.8438</td><td>0.8461</td><td>0.8485</td><td>0.8508</td><td>0.8531</td><td>0.8554</td><td>0.8577</td><td>0.8599</td><td>0.8621</td></tr>
+<tr><td><strong>1.5</strong></td><td>0.9332</td><td>0.9345</td><td>0.9357</td><td>0.9370</td><td>0.9382</td><td>0.9394</td><td>0.9406</td><td>0.9418</td><td>0.9429</td><td>0.9441</td></tr>
+<tr><td><strong>1.6</strong></td><td>0.9452</td><td>0.9463</td><td>0.9474</td><td>0.9484</td><td>0.9495</td><td>0.9505</td><td>0.9515</td><td>0.9525</td><td>0.9535</td><td>0.9545</td></tr>
+<tr><td><strong>1.9</strong></td><td>0.9713</td><td>0.9719</td><td>0.9726</td><td>0.9732</td><td>0.9738</td><td>0.9744</td><td>0.9750</td><td>0.9756</td><td>0.9761</td><td>0.9767</td></tr>
+<tr><td><strong>2.0</strong></td><td>0.9772</td><td>0.9778</td><td>0.9783</td><td>0.9788</td><td>0.9793</td><td>0.9798</td><td>0.9803</td><td>0.9808</td><td>0.9812</td><td>0.9817</td></tr>
+<tr><td><strong>2.5</strong></td><td>0.9938</td><td>0.9940</td><td>0.9941</td><td>0.9943</td><td>0.9945</td><td>0.9946</td><td>0.9948</td><td>0.9949</td><td>0.9951</td><td>0.9952</td></tr>
+<tr><td><strong>3.0</strong></td><td>0.9987</td><td>0.9987</td><td>0.9987</td><td>0.9988</td><td>0.9988</td><td>0.9989</td><td>0.9989</td><td>0.9989</td><td>0.9990</td><td>0.9990</td></tr>
+</table>
+</div>
+
+<p style="text-align: center; color: #666; margin-top: 2rem;">
+<em>לטבלה מלאה, עיינו ב-PDF של הסיכום.</em>
+</p>
+
+<div class="nav-links">
+  <a href="{{ site.baseurl }}/units/course_sum.html">→ סיכום הקורס</a>
+  <a href="{{ site.baseurl }}/">חזרה לדף הבית ←</a>
+</div>
