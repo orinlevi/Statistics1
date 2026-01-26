@@ -17,4 +17,5 @@ exclude:
   - README.md
   - Makefile
   - "_posts"
-  - "_posts/**/*"
+  - "vendor"
+  - "vendor/bundle"
