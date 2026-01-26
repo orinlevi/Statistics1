@@ -4,7 +4,7 @@
 
 ## צפייה באתר
 
-האתר זמין בכתובת: https://orinlevi.github.io/statistics_1_sum/
+האתר זמין בכתובת: https://orinlevi.github.io/Statistics_1_sum/
 
 ## תוכן
 
