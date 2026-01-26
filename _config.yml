@@ -6,6 +6,9 @@ url: "https://orinlevi.github.io"
 
 markdown: kramdown
 
+include:
+  - units
+
 exclude:
   - "*.tex"
   - "*.aux"
