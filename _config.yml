@@ -9,6 +9,12 @@ markdown: kramdown
 include:
   - units
 
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
 exclude:
   - "*.tex"
   - "*.aux"
