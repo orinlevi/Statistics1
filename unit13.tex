@@ -1,0 +1,344 @@
+\section{יחידה 13: מעבר לבדיקת השערות – גודל אפקט ורווח סמך}
+
+יחידה זו מסכמת את הקורס ומציגה הסתכלות ביקורתית על בדיקת השערות סטטיסטיות (NHST),
+וכן כלים משלימים שמטרתם לספק תמונה מלאה ומשמעותית יותר של תוצאות מחקר:
+\textbf{גודל אפקט} ו-\textbf{רווח סמך}.
+הדגש עובר מהחלטה בינארית להבנת גודל האפקט ומידת אי־הוודאות.
+
+\subsection{מגבלות בדיקת השערות סטטיסטיות (NHST)}
+
+בדיקת השערות עונה על השאלה:
+\begin{quote}
+האם הנתונים סבירים בהנחה שהשערת האפס $H_0$ נכונה?
+\end{quote}
+
+אך לשיטה זו מגבלות מהותיות.
+
+\subsubsection{תלות בגודל המדגם}
+
+\begin{itemize}
+\item כאשר $n$ גדול, טעות התקן קטנה.
+\item לכן גם אפקטים קטנים מאוד עשויים להיות מובהקים סטטיסטית.
+\item במדגמים קטנים, אפקטים גדולים עלולים לא לצאת מובהקים.
+\end{itemize}
+
+\subsubsection{מובהקות אינה חשיבות}
+
+מובהקות סטטיסטית אינה מעידה בהכרח על חשיבות מעשית או קלינית של האפקט.
+
+\subsubsection{שרירותיות רמת המובהקות}
+
+\begin{itemize}
+\item הבחירה ב-$\alpha = 0.05$ היא מוסכמה ולא חוק טבע.
+\item ערכים קרובים לסף (למשל $p=0.049$ לעומת $p=0.051$)
+עשויים להוביל למסקנות שונות לחלוטין.
+\end{itemize}
+
+\subsubsection{מסקנה בינארית}
+
+בדיקת השערות מובילה להכרעה דיכוטומית:
+\begin{itemize}
+\item דוחים את $H_0$
+\item או לא דוחים את $H_0$
+\end{itemize}
+
+ואינה מספקת מידע על גודל האפקט או אי־הוודאות באמידה.
+
+\subsection{p-value ופרשנותו}
+
+\textbf{p-value} מודד עד כמה הנתונים אינם סבירים בהנחה ש-$H_0$ נכונה.
+
+\begin{itemize}
+\item p-value אינו מודד את גודל האפקט.
+\item p-value אינו הסתברות ש-$H_0$ נכונה.
+\item ערך p קטן יותר מעיד על ראיות חזקות יותר נגד $H_0$,
+אך לא בהכרח על אפקט גדול יותר.
+\end{itemize}
+
+\subsection{\hebeng{גודל אפקט}{Effect Size}}
+
+\subsubsection{רעיון מרכזי}
+
+גודל אפקט מודד \textbf{כמה גדול ההבדל או הקשר},
+ולא רק האם הוא מובהק סטטיסטית.
+
+\subsubsection{מאפיינים מרכזיים}
+
+\begin{itemize}
+\item מאפשר פרשנות מעשית של התוצאה
+\item מאפשר השוואה בין מחקרים שונים
+\item אינו תלוי בגודל המדגם בלבד
+\end{itemize}
+
+\subsubsection{\hebeng{מדד כהן $d$}{Cohen's d}}
+
+\paragraph{מטרה}
+מדד כהן $d$ מודד את \textbf{גודל ההבדל במונחי סטיות תקן}, כלומר גודל אפקט \textbf{מתוקנן} (Standardized),
+כדי שאפשר יהיה לפרש ולהשוות בין מחקרים גם כשסקאלות שונות.
+
+\paragraph{הגדרה (מקרה בסיסי: שתי קבוצות)}
+כאשר משווים שני ממוצעים:
+\[
+d = \frac{\bar X_1 - \bar X_2}{s_{\text{pooled}}}
+\]
+
+כאשר $s_{\text{pooled}}$ היא סטיית תקן משוקללת (pooled):
+\[
+s_{\text{pooled}}=
+\sqrt{\frac{(n_1-1)s_1^2 + (n_2-1)s_2^2}{n_1+n_2-2}}
+\]
+
+\paragraph{מקרה של מבחן חד-מדגמי מול ערך ייחוס}
+כאשר משווים ממוצע מדגם לערך תיאורטי $\mu_0$:
+\[
+d = \frac{\bar X - \mu_0}{s}
+\]
+
+\paragraph{פרשנות אינטואיטיבית}
+\begin{itemize}
+\item $d$ אומר: \textbf{כמה סטיות תקן} מפרידים בין הממוצעים.
+\item בניגוד ל-$p$-value, $d$ מתאר \textbf{חשיבות/עוצמה מעשית} (magnitude) ולא רק מובהקות.
+\end{itemize}
+
+\paragraph{כללי אצבע נפוצים (Cohen)}
+\begin{itemize}
+\item $d \approx 0.2$ אפקט קטן
+\item $d \approx 0.5$ אפקט בינוני
+\item $d \approx 0.8$ אפקט גדול
+\end{itemize}
+
+\paragraph{דגש למבחן}
+ייתכן מצב של:
+\begin{itemize}
+\item $d$ קטן אך $p$ קטן מאוד (מדגם גדול)
+\item $d$ גדול אך $p$ לא מובהק (מדגם קטן)
+\end{itemize}
+לכן בדיווח מלא רצוי לציין גם \textbf{מובהקות}, גם \textbf{גודל אפקט}, וגם \textbf{רווח סמך}.
+
+\begin{figure}[H]
+    \centering
+    \begin{english}
+    \begin{tcolorbox}[colback=blue!3, colframe=blue!30, width=0.9\textwidth, title=Cohen's $d$]
+        \begin{hebrew}
+        זהו המדד הסטנדרטי למדידת גודל האפקט ביחידות של סטיות תקן. 
+        \begin{itemize}
+            \item \textbf{אפקט קטן:} $d \approx 0.2$
+            \item \textbf{אפקט בינוני:} $d \approx 0.5$
+            \item \textbf{אפקט גדול:} $d \approx 0.8$
+        \end{itemize}
+        \end{hebrew}
+    \end{tcolorbox}
+    \end{english}
+\end{figure}
+
+\subsubsection{דגש למבחן}
+
+ייתכנו המצבים:
+\begin{itemize}
+\item אפקט קטן אך מובהק (במדגם גדול)
+\item אפקט גדול אך לא מובהק (במדגם קטן)
+\end{itemize}
+
+\subsection{רווח סמך (Confidence Interval)}
+
+\subsubsection{הגדרה}
+
+רווח סמך הוא תחום ערכים, המחושב על סמך מדגם,
+אשר בשיטת בנייה נתונה מכיל את פרמטר האוכלוסייה
+בהסתברות נתונה בטווח הארוך.
+
+\subsubsection{רמת סמך}
+
+רווח סמך של 95\% פירושו:
+\begin{itemize}
+\item אם נבנה רווחים רבים באותה שיטה
+\item כ-95\% מהם יכילו את הפרמטר האמיתי
+\end{itemize}
+
+\textbf{אסור לפרש} זאת כהסתברות שהפרמטר נמצא בתוך הרווח.
+
+\subsection{מבנה כללי של רווח סמך}
+
+\[
+\text{אומדן} \pm \text{שגיאה}
+\]
+
+כאשר השגיאה תלויה ב:
+\begin{itemize}
+\item רמת הסמך
+\item טעות התקן
+\item גודל המדגם
+\end{itemize}
+
+\subsection{\hebeng{רווח סמך לתוחלת (כאשר $\sigma$ ידועה)}{Confidence Interval for Mean (Known $\sigma$)}}
+\[
+\bar{X} \pm Z_{\alpha/2}\cdot \frac{\sigma}{\sqrt{n}}
+\]
+
+\begin{itemize}
+\item מרכז הרווח הוא ממוצע המדגם
+\item רוחב הרווח משקף את אי־הוודאות באמידה
+\end{itemize}
+
+\subsection{\hebeng{גורמים המשפיעים על רוחב רווח הסמך}{Factors Affecting CI Width}}
+
+הרווח מוגדר כמרחק מהממוצע: $Z_{\alpha/2} \cdot \frac{\sigma_x}{\sqrt{n}}$.
+
+\begin{itemize}
+\item $n$ גדול יותר $\rightarrow$ רווח צר יותר
+\item $\sigma$ גדולה יותר $\rightarrow$ רווח רחב יותר
+\item רמת סמך גבוהה יותר $\rightarrow$ רווח רחב יותר
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \setlength{\fboxsep}{10pt} % המרוח בין התמונה למסגרת
+    \setlength{\fboxrule}{1pt}  % עובי המסגרת
+    \fcolorbox{black}{pink!14}{% רקע צהבהב להבלטת הגורמים המשפיעים
+        \includegraphics[width=0.85\textwidth]{CI_impacts.png}
+    }
+    \caption{השפעת המשתנים על רווח בר הסמך}
+\end{figure}
+
+\begin{center}
+\begin{minipage}{0.95\textwidth}
+\begin{english}
+\centering
+\begin{tikzpicture}[node distance=1.5cm, auto]
+
+    % המשתנים מהנוסחה
+    \node (alpha) [statbox, fill=blue!5] {$\alpha \downarrow$ \\ (Confidence $\uparrow)$};
+    \node (sigma) [statbox, right=0.5cm of alpha, fill=green!5] {$\sigma_x \uparrow$ \\ (Standard Deviation)};
+    \node (n) [statbox, right=0.5cm of sigma, fill=red!5] {$n \uparrow$ \\ (Sample Size)};
+
+    % התוצאה על הרווח
+    \node (res_alpha) [below=1.2cm of alpha, font=\small] {Wider Interval $\uparrow$};
+    \node (res_sigma) [below=1.2cm of sigma, font=\small] {Wider Interval $\uparrow$};
+    \node (res_n) [below=1.2cm of n, font=\small] {Narrower Interval $\downarrow$};
+
+    % חצים צבעוניים (לפי התמונה)
+    \draw [stataxis, blue] (alpha) -- (res_alpha);
+    \draw [stataxis, green!60!black] (sigma) -- (res_sigma);
+    \draw [stataxis, red] (n) -- (res_n);
+
+\end{tikzpicture}
+\end{english}
+\end{minipage}
+\end{center}
+
+\subsection{הקשר בין רווח סמך לבדיקת השערות}
+
+קיים קשר ישיר בין:
+\begin{itemize}
+\item רווח סמך דו־צדדי ברמת סמך $1-\alpha$
+\item בדיקת השערות דו־צדדית ברמת מובהקות $\alpha$
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \setlength{\fboxsep}{10pt} % המרחק בין התמונה למסגרת
+    \setlength{\fboxrule}{1pt}  % עובי המסגרת
+    \fcolorbox{black}{purple!5}{\includegraphics[width=0.85\textwidth]{typeIerror-power.png}}
+    \caption{Probability of Rejecting the Null Hypothesis: Type I Error and Power}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \setlength{\fboxsep}{10pt}
+    \fcolorbox{black}{purple!5}{\includegraphics[width=0.85\textwidth]{typeIIerror-confidence.png}}
+    \caption{Probability of Non-Rejection of the Null Hypothesis: Type II Error and Confidence Level}
+\end{figure}
+
+\vspace{1cm}
+
+\subsubsection{כלל חשוב}
+
+\begin{itemize}
+\item אם ערך לפי $H_0$ נמצא בתוך רווח הסמך $\rightarrow$ לא דוחים את $H_0$
+\item אם ערך לפי $H_0$ מחוץ לרווח הסמך $\rightarrow$ דוחים את $H_0$
+\end{itemize}
+
+ההבדל הוא בייצוג:
+בדיקת השערות מספקת החלטה בינארית,
+ורווח סמך מספק טווח אי־ודאות רציף.
+
+\subsection{שילוב הכלים}
+
+בדיווח סטטיסטי מלא מומלץ לשלב:
+\begin{itemize}
+\item בדיקת השערות (מובהקות)
+\item גודל אפקט
+\item רווח סמך
+\end{itemize}
+
+שילוב זה מאפשר:
+\begin{itemize}
+\item קבלת החלטה
+\item הבנת המשמעות המעשית
+\item הערכת אי־הוודאות
+\end{itemize}
+
+\subsection{\hebeng{הקשר בין רווח סמך לעוצמת המבחן}{Confidence Intervals and Power}}
+
+כפי שניתן לראות בתרשים, קיימת שרשרת של השפעות:
+\begin{itemize}
+    \item \textbf{צמצום רווח הסמך (CI):} נגרם לרוב על ידי הגדלת המדגם $(n)$ או הקטנת רמת הביטחון.
+    \item \textbf{הגדלת $\alpha$:} גורמת לדחייה קלה יותר של $H_0$ (יותר שטח בגרף תחת אזור הדחייה).
+    \item \textbf{שיפור עוצמת המבחן:} ככל שקל יותר לדחות את $H_0$, כך גדל הסיכוי שנזהה אפקט אמיתי $(1-\beta)$.
+\end{itemize}
+
+\vspace{1.5cm} % מוסיף רווח של סנטימטר וחצי בין התמונות
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{a_b_errors} % השתמשי בתמונה שכבר העלית
+    \caption{המחשה גרפית של שטחי הטעות והעוצמה}
+\end{figure}
+
+\vspace{1.5cm} % מוסיף רווח של סנטימטר וחצי בין התמונות
+
+\begin{center}
+\begin{minipage}{0.95\textwidth}
+\begin{english}
+\centering
+\begin{tikzpicture}[node distance=1.5cm, auto]
+
+    % Nodes - English terms for clarity
+    \node (n) [statbox, fill=purple!5] {Increase Sample Size \\ $(n)$};
+    \node (ci) [statbox, below=of n, fill=blue!5] {Narrower Confidence \\ Interval (CI)};
+    \node (reject) [statbox, below=of ci, fill=orange!5] {Easier to Reject \\ Null Hypothesis $(H_0)$};
+    
+    % Outcomes
+    \node (alpha) [statbox, below left=1.8cm and 0.2cm of reject, fill=red!5] 
+        {$\uparrow$ Type I Error \\ $(\alpha)$};
+    \node (power) [statbox, below right=1.8cm and 0.2cm of reject, fill=green!5] 
+        {$\uparrow$ Statistical Power \\ $(1-\beta)$};
+
+    % Main Arrows
+    \draw [stataxis] (n) -- (ci);
+    \draw [stataxis] (ci) -- (reject);
+    \draw [stataxis] (reject.south) -- ++(0,-0.5) -| (alpha.north);
+    \draw [stataxis] (reject.south) -- ++(0,-0.5) -| (power.north);
+
+    % Side Arrows to show direct influence
+    \draw [stataxis, bend right=45] (n.west) to node[left, font=\tiny] {Direct Impact} (reject.west);
+    \draw [stataxis, bend right=60] (n.west) to (alpha.west);
+
+\end{tikzpicture}
+\end{english}
+\captionof{figure}{Detailed Flowchart: Sample Size Impact on Power and Error}
+\end{minipage}
+\end{center}
+
+\subsection{דגש מסכם ליחידה}
+
+בדיקת השערות מספקת קריטריון החלטה,
+אך אינה מספיקה לבדה.
+
+הסקה סטטיסטית מלאה דורשת:
+\begin{itemize}
+\item פרשנות מעבר ל-p-value
+\item הערכת גודל האפקט
+\item שימוש ברווחי סמך
+\end{itemize}
+

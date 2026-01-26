@@ -1,0 +1,74 @@
+
+% ===============================
+% שפה (עברית + English)
+% ===============================
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setmainlanguage{hebrew}
+\setotherlanguage{english}
+\newfontfamily\hebrewfont{David CLM}
+
+% ===============================
+% מתמטיקה
+% ===============================
+\usepackage{amsmath, amssymb}
+
+% ===============================
+% עמוד
+% ===============================
+\usepackage[a4paper,margin=2.5cm]{geometry}
+
+% ===============================
+% רשימות
+% ===============================
+\usepackage{enumitem}
+\setlist[itemize]{itemsep=0.3em}
+
+% ===============================
+% טבלאות וצבעים (אם יש rowcolors וכד')
+% ===============================
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{longtable}
+
+% ===============================
+% גרפים וציורים (TikZ + pgfplots)
+% ===============================
+% --- חבילות גרפיקה וסימונים ---
+\usepackage{float}       % לקיבוע תמונות ותרשימים עם [H]
+\usepackage{caption}     % מאפשר שימוש ב-captionof מחוץ ל-figure
+\usepackage{amssymb}     % לסימון V וסימנים מתמטיים
+\usepackage{pifont}      % לסימון X (ding)
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\usepackage[most]{tcolorbox}
+
+% --- הגדרות TikZ (גרסה חסינה) ---
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning}
+
+\tikzset{
+        statbox/.style={
+        rectangle, 
+        rounded corners, 
+        draw=black, 
+        thick,
+        fill=blue!5,
+        text width=4.5cm, % הגדלנו מ-3.2cm ל-4.5cm כדי שיהיה רחב יותר
+        minimum height=1.2cm, 
+        text centered, 
+        font=\footnotesize % הקטנו מעט את הגופן מ-small ל-footnotesize
+    },
+    stataxis/.style={thick, -{Stealth[scale=1.2]}}
+}
+% ===============================
+% קישורים (אחרון)
+% ===============================
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,    % הופך את הטקסט עצמו לצבעוני (במקום מסגרת)
+    linkcolor=blue,     % צבע קישורים פנימיים (כמו תוכן עניינים)
+    citecolor=green,    % צבע הפניות למקורות/ביבליוגרפיה
+    filecolor=magenta,  % צבע קישורים לקבצים
+    urlcolor=cyan       % צבע קישורי אינטרנט חיצוניים
+}

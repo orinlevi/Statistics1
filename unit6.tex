@@ -1,0 +1,332 @@
+\section{יחידה 6: הסתברות}
+
+יחידה זו עוסקת בהגדרה פורמלית של הסתברות, מאורעות ויחסים ביניהם.  
+הדגש הוא על חשיבה נכונה: זיהוי מרחב המדגם, המאורע הרצוי, ושימוש בחוקי הסתברות בסיסיים.
+
+
+
+\subsection{ניסוי מקרי ומרחב מדגם}
+
+\subsubsection{הגדרות}
+\begin{itemize}
+\item \textbf{ניסוי מקרי}: תהליך שתוצאתו אינה ידועה מראש.
+\item \textbf{מרחב מדגם} ($\Omega$): קבוצת כל התוצאות האפשריות של הניסוי.
+\item \textbf{מאורע}: תת־קבוצה של מרחב המדגם.
+\end{itemize}
+
+\subsubsection{דוגמה}
+בהטלת קובייה:
+\[
+\Omega = \{1,2,3,4,5,6\}
+\]
+
+
+
+\subsection{הסתברות של מאורע}
+
+\subsubsection{הגדרה}
+כאשר כל התוצאות שוות הסתברות:
+\[
+P(A) = \frac{|A|}{|\Omega|}
+\]
+
+\subsubsection{דגשים למבחן}
+\begin{itemize}
+\item תמיד לבדוק: מהו \textbf{הסה״כ}? מהו \textbf{הרצוי}?
+\item $P(\Omega)=1$
+\item $0 \leq P(A) \leq 1$
+\end{itemize}
+
+
+
+\subsection{מאורעות משלימים}
+
+\subsubsection{הגדרה}
+המשלים של מאורע $A$ מסומן $\bar{A}$ ומכיל את כל התוצאות שאינן ב־$A$.
+
+\[
+P(\bar{A}) = 1 - P(A)
+\]
+
+\subsubsection{דגש למבחן}
+המילים \textbf{״לפחות״}, \textbf{״לא״}, \textbf{״אף אחד״} → לעצור ולחשוב על משלים.
+
+
+
+\subsection{איחוד וחיתוך של מאורעות}
+
+\subsubsection{איחוד}
+\[
+A \cup B = \{\text{A או B או שניהם}\}
+\]
+
+\subsubsection{חיתוך}
+\[
+A \cap B = \{\text{A וגם B}\}
+\]
+
+\subsubsection{חוק האיחוד}
+\[
+P(A \cup B) = P(A) + P(B) - P(A \cap B)
+\]
+
+\subsubsection{דגשים למבחן}
+\begin{itemize}
+\item לשים לב לא לספור פעמיים את החיתוך.
+\item אם המאורעות זרים → $P(A \cap B)=0$
+\end{itemize}
+
+
+
+\subsection{מאורעות זרים ומאורעות משלימים}
+
+\subsubsection{מאורעות זרים}
+\[
+A \cap B = \emptyset
+\]
+
+\subsubsection{מאורעות משלימים}
+\[
+A \cup \bar{A} = \Omega
+\]
+
+\subsubsection{דגש למבחן}
+מאורעות משלימים הם תמיד גם זרים וגם ממצים.
+
+
+
+\subsection{הסתברות מותנית (ברמה אינטואיטיבית)}
+
+\subsubsection{רעיון}
+הסתברות של מאורע \textbf{בהינתן} שמאורע אחר כבר קרה.
+
+\subsubsection{דוגמה}
+מה הסיכוי שסטודנט אוכל בריא \textbf{בהינתן} שהוא עושה ספורט?
+
+\subsubsection{דגש למבחן}
+לעיתים אין צורך בנוסחה – מספיק לצמצם את מרחב המדגם.
+
+
+
+\subsection{בעיות רצף וחזרות}
+
+\subsubsection{רעיון}
+כאשר מבצעים ניסוי חוזר (כמו הזמנת קולה):
+\begin{itemize}
+\item אם יש תלות → מכפילים הסתברויות
+\item רצף מסוים → סדר חשוב
+\end{itemize}
+
+\subsubsection{דוגמה}
+בדיוק 5 פעמים קולה בלי גזים מתוך 7:
+\[
+\binom{7}{5} \cdot 0.8^5 \cdot 0.2^2
+\]
+
+\subsubsection{דגש למבחן}
+\begin{itemize}
+    \item "בדיוק" \mbox{$\leftarrow$} קומבינציה
+    \item "ברצף" \mbox{$\leftarrow$} בלי קומבינציה
+\end{itemize}
+
+
+
+\subsection{שיטת המשלים}
+
+\subsubsection{רעיון}
+כשקשה לחשב ישירות – מחשבים את המקרה היחיד שלא רוצים.
+
+\[
+P(\text{לפחות אחד}) = 1 - P(\text{אף אחד})
+\]
+
+\subsubsection{דוגמה}
+לפחות עוגה טעימה אחת:
+\[
+1 - P(\text{שתיהן לא טעימות})
+\]
+
+
+
+\subsection{שילוב הסתברות וקומבינטוריקה}
+
+\subsubsection{עיקרון}
+\[
+P = \frac{\text{רצוי}}{\text{סה״כ}}
+\]
+
+\subsubsection{דוגמאות קלאסיות}
+\begin{itemize}
+\item יד פוקר
+\item בחירת קלפים
+\item סידורי ישיבה
+\end{itemize}
+
+
+
+\subsection{טעויות נפוצות בהסתברות}
+
+\begin{itemize}
+\item לשכוח משלים
+\item לבלבל בין איחוד לחיתוך
+\item לא להגדיר נכון את מרחב המדגם
+\item לחשוב ש״או״ הוא תמיד חיבור פשוט
+\end{itemize}
+
+\subsection{דגש מסכם למבחן}
+
+לפני חישוב:
+\begin{enumerate}
+\item מהו הניסוי?
+\item מהו מרחב המדגם?
+\item מה הרצוי?
+\item יש תלות? יש סדר?
+\item שווה לבדוק משלים?
+\end{enumerate}
+
+\subsection{הסתברות מותנית}
+
+\subsubsection{הגדרה}
+ההסתברות של מאורע $A$ בהינתן שמאורע $B$ התרחש:
+\[
+P(A \mid B) = \frac{P(A \cap B)}{P(B)}, \qquad P(B)>0
+\]
+
+\subsubsection{הסבר אינטואיטיבי}
+הסתברות מותנית היא הסתברות בעולם מצומצם:
+\begin{itemize}
+\item אנו יודעים ש־$B$ קרה
+\item לכן מרחב המדגם מצטמצם ל־$B$
+\item בודקים מה החלק של $A$ בתוך העולם הזה
+\end{itemize}
+
+\subsubsection{דגש למבחן}
+לא מחשבים “סתם לפי הנוסחה” — קודם מצמצמים את מרחב המדגם בראש.
+
+
+
+\subsection{הקשר בין חיתוך להסתברות מותנית}
+
+מההגדרה מתקבל:
+\[
+P(A \cap B) = P(A \mid B)\cdot P(B)
+\]
+
+\subsubsection{דגש למבחן}
+אם כתוב:
+\begin{quote}
+״בהינתן ש־$B$ קרה, מה ההסתברות שגם $A$ קרה?״
+\end{quote}
+סביר מאוד שצריך חיתוך דרך הסתברות מותנית.
+
+
+
+\subsection{עצמאות בין מאורעות}
+
+\subsubsection{הגדרה}
+מאורעות $A$ ו־$B$ נקראים \textbf{בלתי־תלויים} אם:
+\[
+P(A \mid B) = P(A)
+\]
+
+\subsubsection{נוסחה שקולה}
+\[
+P(A \cap B) = P(A)\cdot P(B)
+\]
+
+\subsubsection{הסבר אינטואיטיבי}
+התרחשות של $B$ לא משנה את הסיכוי של $A$.
+
+\subsubsection{דגש למבחן}
+עצמאות היא תכונה מתמטית — לא אינטואיטיבית.
+אין להסיק עצמאות מתוך ניסוח מילולי בלבד.
+
+
+
+\subsection{טעויות נפוצות בעצמאות}
+
+\begin{itemize}
+\item לבלבל בין מאורעות זרים לעצמאיים  
+(מאורעות זרים עם הסתברות חיובית \textbf{אינם} עצמאיים)
+\item להניח שעצמאות נובעת מ״אין קשר סיבתי״
+\end{itemize}
+
+
+
+\subsection{נוסחת בייס}
+
+\subsubsection{הגדרה}
+נוסחת בייס מתקבלת ישירות מהגדרת הסתברות מותנית:
+\[
+P(A \mid B) = \frac{P(B \mid A)\cdot P(A)}{P(B)}
+\]
+
+כאשר:
+\[
+P(B) = P(B \mid A)P(A) + P(B \mid \bar{A})P(\bar{A})
+\]
+
+
+
+\subsection{מתי צריך בייס}
+
+\begin{itemize}
+\item כשנותנים הסתברויות בכיוון אחד (אבחון, בדיקה)
+\item ושואלים הסתברות בכיוון ההפוך
+\end{itemize}
+
+\subsubsection{דוגמה טיפוסית}
+בדיקה רפואית:
+\begin{itemize}
+\item $P(\text{חיובי} \mid \text{חולה})$ נתון
+\item שואלים $P(\text{חולה} \mid \text{חיובי})$
+\end{itemize}
+
+
+
+\subsection{עץ הסתברויות}
+
+\subsubsection{רעיון}
+עץ הסתברות מייצג ניסוי רב־שלבי:
+\begin{itemize}
+\item הסתברויות על הענפים
+\item מכפילים לאורך מסלול
+\item מחברים מסלולים לאותו מאורע
+\end{itemize}
+
+\subsubsection{דגש למבחן}
+עץ טוב יכול לחסוך שימוש מפורש בנוסחת בייס.
+
+
+
+\subsection{השוואה: בייס מול עץ}
+
+\begin{itemize}
+\item בייס — נוסחתי, אלגנטי, קצר
+\item עץ — ויזואלי, אינטואיטיבי, בטוח מטעויות
+\end{itemize}
+
+בשניהם מתקבלת אותה תוצאה.
+
+
+
+\subsection{טעויות נפוצות במבחנים}
+
+\begin{itemize}
+\item לבלבל בין $P(A \mid B)$ ל־$P(B \mid A)$
+\item לשכוח לחשב את $P(B)$ במכנה של בייס
+\item להניח עצמאות בלי בדיקה
+\item לא לצמצם מרחב מדגם לפני חישוב
+\end{itemize}
+
+
+
+\subsection{דגש מסכם ליחידה}
+
+לפני חישוב:
+\begin{enumerate}
+\item מה ידוע?
+\item על מה מתנים?
+\item האם המאורעות עצמאיים?
+\item נוח יותר עץ או בייס?
+\end{enumerate}

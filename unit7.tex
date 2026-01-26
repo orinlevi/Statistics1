@@ -1,0 +1,186 @@
+\section{יחידה 7: מעבר ממדגם לאוכלוסייה – סטטיסטים, פרמטרים ומשתנים מקריים}
+
+יחידה זו עוסקת במעבר מהנתונים שנצפים בפועל (מדגם)  
+אל מודל תאורטי של האוכלוסייה שממנה המדגם נלקח.  
+זהו מעבר מושגי קריטי: משכיחויות והסתברויות אמפיריות  
+אל הסתברות כתכונה של מודל.
+
+\subsection{מדגם ואוכלוסייה}
+
+\subsubsection{הגדרות}
+\begin{itemize}
+\item \textbf{אוכלוסייה (Population)} – אוסף כל המקרים האפשריים בעלי עניין, לרוב תאורטי ואינו נצפה במלואו.
+\item \textbf{מדגם (Sample)} – תת־קבוצה סופית של האוכלוסייה שנמדדת בפועל.
+\end{itemize}
+
+\subsubsection{דגש מושגי}
+\begin{itemize}
+\item באוכלוסייה מדברים על \textbf{הסתברויות}.
+\item במדגם מדברים על \textbf{שכיחויות}.
+\item המדגם נועד לשמש מקור מידע על האוכלוסייה.
+\end{itemize}
+
+
+
+\subsection{פרמטר וסטטיסטי}
+
+\subsubsection{הגדרות}
+\begin{itemize}
+\item \textbf{פרמטר (Parameter)} – גודל קבוע המתאר את האוכלוסייה כולה (למשל: $\mu, \sigma, p$).
+\item \textbf{סטטיסטי (Statistic)} – גודל מחושב מתוך המדגם (למשל: $\bar{X}, S, \hat{p}$).
+\end{itemize}
+
+\subsubsection{דוגמאות}
+\begin{itemize}
+\item $\mu$ – ממוצע האוכלוסייה  
+\item $\bar{X}$ – ממוצע המדגם  
+\item $p$ – הסתברות באוכלוסייה  
+\item $\hat{p}$ – שכיחות יחסית במדגם
+\end{itemize}
+
+\subsubsection{דגש למבחן}
+סטטיסטי הוא \textbf{משתנה מקרי}.  
+פרמטר הוא \textbf{קבוע לא ידוע}.
+
+
+
+\subsection{\hebeng{משתנה מקרי}{Random Variable}}
+
+\subsubsection{הגדרה}
+משתנה מקרי הוא פונקציה המתאימה ערך מספרי לכל תוצאה אפשרית בניסוי מקרי.
+
+\begin{english}
+\[
+X : \Omega \rightarrow \mathbb{R}
+\]
+\end{english}
+
+\subsubsection{פירוש}
+המשתנה המקרי אינו “המדידה עצמה” אלא ייצוג מתמטי של תוצאת הניסוי.
+
+
+\subsection{משתנה מקרי בדיד ורציף}
+
+\subsubsection{בדיד (Discrete)}
+\begin{itemize}
+\item מקבל מספר סופי או בן־מנייה של ערכים.
+\item ניתן לדבר על:
+\[
+P(X = x)
+\]
+\end{itemize}
+
+\subsubsection{רציף (Continuous)}
+\begin{itemize}
+\item מקבל אינסוף ערכים בתחום רציף.
+\item ההסתברות לערך בודד היא:
+\[
+P(X = x) = 0
+\]
+\item הסתברות מוגדרת רק על קטעים.
+\end{itemize}
+
+\subsubsection{דגש למבחן}
+האפס אינו אומר “בלתי אפשרי” –  
+אלא “זניח יחסית לאינסוף האפשרויות”.
+
+
+\subsection{שכיחות, שכיחות יחסית והסתברות}
+
+\subsubsection{במדגם}
+\begin{itemize}
+\item שכיחות: מספר הפעמים שערך מופיע.
+\item שכיחות יחסית:
+\[
+\frac{f_i}{n}
+\]
+\end{itemize}
+
+\subsubsection{באוכלוסייה}
+\begin{itemize}
+\item אין ספירה בפועל.
+\item יש הסתברות כתכונה של המודל.
+\end{itemize}
+
+\subsubsection{קשר חשוב}
+כאשר גודל המדגם גדל:
+\[
+\text{שכיחות יחסית} \longrightarrow \text{הסתברות}
+\]
+
+
+\subsection{תוחלת (Expectation)}
+
+\subsubsection{רעיון}
+התוחלת היא הערך הממוצע של משתנה מקרי בטווח הארוך.
+
+\subsubsection{בדיד}
+\[
+E(X) = \sum x \cdot P(X = x)
+\]
+
+\subsubsection{רציף}
+\begin{english}
+\[
+E(X) = \int_{-\infty}^{\infty} x \cdot f(x)\,dx
+\]
+\end{english}
+
+\subsubsection{פירוש אינטואיטיבי}
+אם נבצע את הניסוי מספר רב מאוד של פעמים –  
+הממוצע של התוצאות יתקרב לתוחלת.
+
+
+\subsection{סטטיסטי כמשתנה מקרי}
+
+\subsubsection{רעיון מרכזי}
+סטטיסטי (כמו $\bar{X}$) תלוי במדגם – ולכן הוא משתנה מקרי.
+
+\subsubsection{משמעות}
+\begin{itemize}
+\item לסטטיסטי יש התפלגות.
+\item ניתן לדבר על תוחלת ושונות של סטטיסטי.
+\end{itemize}
+
+
+\subsection{אמידה (Estimation)}
+
+\subsubsection{אומד (Estimator)}
+סטטיסטי שנועד להעריך פרמטר לא ידוע.
+
+\subsubsection{דוגמה}
+\[
+\bar{X} \text{ הוא אומד ל־ } \mu
+\]
+
+
+\subsection{תכונות של אומדים}
+
+\subsubsection{חוסר הטיה (Unbiasedness)}
+\[
+E(\hat{\theta}) = \theta
+\]
+
+\subsubsection{יעילות (Efficiency)}
+אומד עם שונות קטנה יותר עדיף.
+
+\subsubsection{קונסיסטנטיות (Consistency)}
+כאשר $n \to \infty$:
+\[
+\hat{\theta} \to \theta
+\]
+
+\subsubsection{מספיקות (Sufficiency)}
+האומד מכיל את כל המידע הרלוונטי על הפרמטר.
+
+
+\subsection{דגש מסכם ליחידה}
+
+יחידה זו מבצעת את המעבר:
+\[
+\text{נתונים} \rightarrow \text{סטטיסטים}
+\rightarrow \text{מודל הסתברותי}
+\rightarrow \text{פרמטרים}
+\]
+
+זהו הבסיס לכל הסטטיסטיקה ההיסקית בהמשך הקורס.
