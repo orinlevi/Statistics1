@@ -1,7 +1,7 @@
 title: "סטטיסטיקה לפסיכולוגיה א'"
 description: "סיכום קורס סטטיסטיקה לפסיכולוגיה - אוניברסיטת תל אביב"
 author: "Orin Levi"
-baseurl: "/statistics_1_sum"
+baseurl: "/Statistics_1_sum"
 url: "https://orinlevi.github.io"
 
 markdown: kramdown
