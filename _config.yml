@@ -16,3 +16,5 @@ exclude:
   - Gemfile.lock
   - README.md
   - Makefile
+  - "_posts"
+  - "_posts/**/*"
