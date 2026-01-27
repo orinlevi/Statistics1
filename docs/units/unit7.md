@@ -94,7 +94,7 @@
 
 <div class="formula-box" markdown>
 
-\[\text{שכיחות יחסית} \longrightarrow \text{הסתברות}\]
+שכיחות יחסית ← הסתברות
 
 </div>
 
@@ -179,7 +179,7 @@
 
 <div class="formula-box" markdown>
 
-\[\text{נתונים} \rightarrow \text{סטטיסטים} \rightarrow \text{מודל הסתברותי} \rightarrow \text{פרמטרים}\]
+נתונים ← סטטיסטים ← מודל הסתברותי ← פרמטרים
 
 </div>
 

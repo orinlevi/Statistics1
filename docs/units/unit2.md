@@ -167,7 +167,7 @@
 
 <div class="formula-box" markdown>
 
-\[\sum |x_i - c| \Rightarrow c = \text{חציון}\]
+\[\sum |x_i - c|\] ⇒ \(c\) = חציון
 
 </div>
 
@@ -175,7 +175,7 @@
 
 <div class="formula-box" markdown>
 
-\[\Rightarrow c = \text{שכיח}\]
+⇒ \(c\) = שכיח
 
 </div>
 

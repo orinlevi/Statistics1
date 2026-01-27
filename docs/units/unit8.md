@@ -190,6 +190,6 @@
 
 <div class="formula-box" markdown>
 
-\[\text{מדגם} \rightarrow \text{היסטוגרמה} \rightarrow \text{צפיפות} \rightarrow \text{פונקציית צפיפות}\]
+מדגם ← היסטוגרמה ← צפיפות ← פונקציית צפיפות
 
 </div>

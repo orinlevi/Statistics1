@@ -155,7 +155,7 @@
 
 <div class="formula-box" markdown>
 
-\[\text{שמי} \rightarrow \text{סדר} \rightarrow \text{רווח} \rightarrow \text{יחס}\]
+שמי ← סדר ← רווח ← יחס
 
 </div>
 
