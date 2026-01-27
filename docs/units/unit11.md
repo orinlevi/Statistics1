@@ -70,17 +70,32 @@
 
 אזור הדחייה מתחלק לשני הזנבות, בכל זנב שטח של \(\alpha/2\).
 
+<figure markdown="span">
+  ![בדיקה דו-צדדית](../assets/two_tailed_test.png){ width="70%" }
+  <figcaption>אזור דחייה בבדיקה דו-צדדית</figcaption>
+</figure>
+
 ### בדיקה חד־צדדית ימנית (Right-tailed)
 
 נשתמש בה כאשר נשאלת שאלה על "עלייה" או "שיפור": \(H_1: \mu > \mu_0\).
 
 כל שטח ה־\(\alpha\) נמצא בזנב הימני.
 
+<figure markdown="span">
+  ![בדיקה חד-צדדית ימנית](../assets/right_tailed_test.png){ width="70%" }
+  <figcaption>אזור דחייה בבדיקה חד-צדדית ימנית</figcaption>
+</figure>
+
 ### בדיקה חד־צדדית שמאלית (Left-tailed)
 
 נשתמש בה כאשר נשאלת שאלה על "ירידה" או "הפחתה": \(H_1: \mu < \mu_0\).
 
 כל שטח ה־\(\alpha\) נמצא בזנב השמאלי.
+
+<figure markdown="span">
+  ![בדיקה חד-צדדית שמאלית](../assets/left_tailed_test.png){ width="70%" }
+  <figcaption>אזור דחייה בבדיקה חד-צדדית שמאלית</figcaption>
+</figure>
 
 ## p-value
 
