@@ -10,11 +10,13 @@
 *.fls
 *.bbl
 *.blg
+*.xdv
 
-# Jekyll build
-_site/
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
-vendor/
-Gemfile.lock
+# MkDocs build
+site/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/

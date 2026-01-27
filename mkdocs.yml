@@ -1,0 +1,86 @@
+site_name: סטטיסטיקה לפסיכולוגיה א'
+site_description: סיכום מקיף לקורס סטטיסטיקה לפסיכולוגיה א', אוניברסיטת תל אביב
+docs_dir: docs
+site_url: https://orinlevi.github.io/Statistics_1_sum/
+
+repo_name: Statistics_1_sum
+repo_url: https://github.com/orinlevi/Statistics_1_sum
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/orinlevi/Statistics_1_sum
+
+theme:
+  logo: assets/logo.png
+  favicon: assets/logo.png
+  name: material
+  language: he
+  direction: rtl
+  palette:
+    - scheme: slate
+      media: "(min-width: 0)"
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: מצב יום
+    - scheme: default
+      media: "(prefers-color-scheme: light)"
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: מצב לילה
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.expand
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search:
+      lang: he
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+  - tables
+  - toc:
+      permalink: true
+  - attr_list
+  - md_in_html
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - בית: index.md
+  - יחידות:
+    - יחידה 1 - מושגי יסוד וסולמות מדידה: units/unit1.md
+    - יחידה 2 - מדדי מרכז: units/unit2.md
+    - יחידה 3 - מדדי פיזור: units/unit3.md
+    - יחידה 4 - מדדי מיקום יחסי ומדדי קשר: units/unit4.md
+    - יחידה 5 - קומבינטוריקה: units/unit5.md
+    - יחידה 6 - הסתברות: units/unit6.md
+    - יחידה 7 - מעבר ממדגם לאוכלוסייה: units/unit7.md
+    - יחידה 8 - ייצוגים גרפיים, התפלגות וצפיפות: units/unit8.md
+    - יחידה 9 - ההתפלגות הנורמלית: units/unit9.md
+    - יחידה 10 - התפלגות הדגימה: units/unit10.md
+    - יחידה 11 - בדיקת השערות סטטיסטיות: units/unit11.md
+    - יחידה 12 - טעויות סטטיסטיות ועוצמת המבחן: units/unit12.md
+    - יחידה 13 - גודל אפקט ורווח סמך: units/unit13.md
+  - נספחים:
+    - סיכום הקורס: units/course_sum.md
+    - טבלת Z: units/ztable.md

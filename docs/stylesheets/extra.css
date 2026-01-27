@@ -1,0 +1,237 @@
+/* === עיצוב מקצועי - סטטיסטיקה לפסיכולוגיה === */
+
+/* צבעים פסטל */
+:root {
+  --pastel-pink: #f4c2c2;
+  --pastel-blue: #b3e5fc;
+  --pastel-mint: #b2dfdb;
+  --pastel-lavender: #d1c4e9;
+  --pastel-peach: #ffccbc;
+  --pastel-yellow: #fff9c4;
+  --text-muted: #a6adc8;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --card-border: rgba(255, 255, 255, 0.1);
+}
+
+/* === כותרת עליונה (Header) === */
+
+.md-header__button.md-logo {
+  padding: 0.1rem !important;
+}
+.md-header__title::after {
+  content: " · by Orin Levi";
+  font-size: 0.7em;
+  font-weight: 400;
+  color: var(--text-muted);
+  margin-inline-start: 8px;
+}
+
+/* === דף הבית - Hero Section === */
+
+.main-title {
+  color: var(--pastel-pink) !important;
+  font-size: 1.4em !important;
+}
+
+/* === כרטיסיות צבעוניות === */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.card {
+  padding: 20px;
+  border-radius: 12px;
+  border: 2px solid;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+  margin-top: 0 !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-pink {
+  background: linear-gradient(135deg, rgba(244, 194, 194, 0.15), rgba(244, 194, 194, 0.05));
+  border-color: var(--pastel-pink);
+}
+
+.card-blue {
+  background: linear-gradient(135deg, rgba(179, 229, 252, 0.15), rgba(179, 229, 252, 0.05));
+  border-color: var(--pastel-blue);
+}
+
+.card-mint {
+  background: linear-gradient(135deg, rgba(178, 223, 219, 0.15), rgba(178, 223, 219, 0.05));
+  border-color: var(--pastel-mint);
+}
+
+.card-lavender {
+  background: linear-gradient(135deg, rgba(209, 196, 233, 0.15), rgba(209, 196, 233, 0.05));
+  border-color: var(--pastel-lavender);
+}
+
+.card-peach {
+  background: linear-gradient(135deg, rgba(255, 204, 188, 0.15), rgba(255, 204, 188, 0.05));
+  border-color: var(--pastel-peach);
+}
+
+/* === Hero Banner === */
+
+.hero-banner {
+  text-align: center;
+  padding: 40px 20px;
+  margin-bottom: 32px;
+  border-radius: 16px;
+  background: linear-gradient(135deg,
+    rgba(244, 194, 194, 0.1),
+    rgba(179, 229, 252, 0.1),
+    rgba(209, 196, 233, 0.1));
+  border: 1px solid var(--card-border);
+}
+
+.hero-banner h1 {
+  border-bottom: none !important;
+  margin-bottom: 16px !important;
+}
+
+.hero-subtitle {
+  color: var(--text-muted);
+  font-size: 1.1em;
+}
+
+.hero-author {
+  margin-top: 12px;
+  font-size: 0.9em;
+  color: var(--pastel-pink);
+}
+
+/* === Stats === */
+
+.stats-row {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin: 24px 0;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 2em;
+  font-weight: bold;
+  color: var(--pastel-blue);
+}
+
+.stat-label {
+  font-size: 0.85em;
+  color: var(--text-muted);
+}
+
+/* === שיפורים כלליים === */
+
+.md-typeset table:not([class]) {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.md-typeset table:not([class]) th {
+  background: rgba(244, 194, 194, 0.1);
+}
+
+.md-typeset a:hover {
+  color: var(--pastel-pink) !important;
+}
+
+.md-nav__link:hover {
+  color: var(--pastel-blue) !important;
+}
+
+/* === Quick Links === */
+
+.quick-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.quick-link {
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  transition: all 0.2s;
+}
+
+.quick-link:hover {
+  background: rgba(244, 194, 194, 0.2);
+  border-color: var(--pastel-pink);
+}
+
+/* === Download Button === */
+
+.download-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, var(--pastel-pink), var(--pastel-lavender));
+  color: #1e1e2e !important;
+  border-radius: 25px;
+  text-decoration: none !important;
+  font-weight: bold;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.download-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(244, 194, 194, 0.4);
+}
+
+/* === Definition/Example/Warning Boxes === */
+
+.definition-box {
+  background: rgba(179, 229, 252, 0.1);
+  border-right: 4px solid var(--pastel-blue);
+  padding: 16px;
+  margin: 16px 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.example-box {
+  background: rgba(178, 223, 219, 0.1);
+  border-right: 4px solid var(--pastel-mint);
+  padding: 16px;
+  margin: 16px 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.warning-box {
+  background: rgba(255, 204, 188, 0.1);
+  border-right: 4px solid var(--pastel-peach);
+  padding: 16px;
+  margin: 16px 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.formula-box {
+  background: rgba(209, 196, 233, 0.1);
+  border: 1px solid var(--pastel-lavender);
+  padding: 16px;
+  margin: 16px 0;
+  border-radius: 8px;
+  text-align: center;
+}
