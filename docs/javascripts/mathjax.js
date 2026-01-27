@@ -4,15 +4,5 @@ window.MathJax = {
     displayMath: [["\\[", "\\]"]],
     processEscapes: true,
     processEnvironments: true
-  },
-  options: {
-    ignoreHtmlClass: ".*|",
-    processHtmlClass: "arithmatex"
   }
 };
-
-document$.subscribe(() => {
-  MathJax.startup.promise.then(() => {
-    MathJax.typesetPromise();
-  });
-});
