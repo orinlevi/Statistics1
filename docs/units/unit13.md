@@ -139,12 +139,27 @@
 | \(\sigma\) גדולה יותר | רווח רחב יותר |
 | רמת סמך גבוהה יותר | רווח רחב יותר |
 
+<figure markdown="span">
+  ![השפעת המשתנים על רווח הסמך](../assets/CI_impacts.png){ width="85%" }
+  <figcaption>השפעת המשתנים על רוחב רווח הסמך</figcaption>
+</figure>
+
 ## הקשר בין רווח סמך לבדיקת השערות
 
 קיים קשר ישיר בין:
 
 - רווח סמך דו־צדדי ברמת סמך \(1-\alpha\)
 - בדיקת השערות דו־צדדית ברמת מובהקות \(\alpha\)
+
+<figure markdown="span">
+  ![טעות סוג I ועוצמה](../assets/typeIerror-power.png){ width="85%" }
+  <figcaption>הסתברות לדחות את השערת האפס: טעות סוג I ועוצמה</figcaption>
+</figure>
+
+<figure markdown="span">
+  ![טעות סוג II ורווח סמך](../assets/typeIIerror-confidence.png.png){ width="85%" }
+  <figcaption>הסתברות לא לדחות את השערת האפס: טעות סוג II ורווח סמך</figcaption>
+</figure>
 
 ### כלל חשוב
 
