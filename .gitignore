@@ -20,3 +20,17 @@ __pycache__/
 *.py[cod]
 .venv/
 venv/
+
+# Editor backup files
+*.bak
+*~
+*.swp
+*.swo
+
+# IDE files
+.vscode/
+.idea/
+*.code-workspace
+
+# TeXShop
+.texshop/
