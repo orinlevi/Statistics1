@@ -34,3 +34,6 @@ venv/
 
 # TeXShop
 .texshop/
+
+# PDF files (generated, not source)
+main.pdf
