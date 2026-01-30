@@ -7,7 +7,19 @@
 %\setdefaultlanguage{hebrew}
 \setmainlanguage{hebrew}
 \setotherlanguage{english}
-\newfontfamily\hebrewfont{David CLM}
+\newfontfamily\hebrewfont{DavidCLM-Medium}[
+  Path = /Users/orinlevi/Library/Fonts/,
+  Extension = .otf,
+  BoldFont = DavidCLM-Bold,
+  ItalicFont = DavidCLM-MediumItalic,
+  BoldItalicFont = DavidCLM-BoldItalic,
+]
+\newfontfamily\hebrewfonttt{DavidCLM-Medium}[
+  Path = /Users/orinlevi/Library/Fonts/,
+  Extension = .otf,
+]
+% גופן לטיני לגרפים (TikZ/pgfplots) – מונע "nullfont" בתווים באנגלית (שם מערכת macOS/Windows)
+\newfontfamily\figurelatinfont{Times New Roman}
 
 % ===============================
 % מתמטיקה
@@ -41,6 +53,7 @@
 \usepackage{pifont}      % לסימון X (ding)
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
+\usepgfplotslibrary{fillbetween}
 
 \usepackage[most]{tcolorbox}
 

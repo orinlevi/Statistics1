@@ -317,6 +317,106 @@ X \sim N(\mu,\sigma^2)
 מכאן נובע שככל ש־$n$ גדול יותר,
 הממוצע המדגמי יציב ומדויק יותר.
 
+
+\subsection{דוגמה אינטואיטיבית: אחוזון באוכלוסייה לעומת ממוצע מדגם}
+
+נניח כי המשתנה באוכלוסייה מתפלג נורמלית, וכי הערך $44$ הוא \textbf{האחוזון ה־44} באוכלוסייה.
+כלומר:
+\[
+P(X \le 44) = 0.44
+\]
+מאחר שהאוכלוסייה נורמלית, ערך זה נמצא משמאל לתוחלת $\mu$ של האוכלוסייה.
+
+כעת נבחר מדגם מקרי בגודל $n=44$ ונבחן את ההסתברות ש\textbf{ממוצע המדגם} יהיה גדול מ־$44$:
+\[
+P(\bar X > 44)
+\]
+
+התפלגות הדגימה של ממוצע המדגם מתפלגת נורמלית סביב אותה תוחלת $\mu$,
+אך עם סטיית תקן קטנה יותר:
+\[
+\sigma_{\bar X} = \frac{\sigma}{\sqrt{n}}
+\]
+
+כתוצאה מכך, הערך $44$ נעשה \textbf{רחוק יותר מן המרכז במונחי סטיות תקן},
+והשטח שמימין לו בהתפלגות הדגימה גדל משמעותית
+לעומת השטח שמימין לו בהתפלגות האוכלוסייה.
+
+בדוגמה זו מתקבל בקירוב:
+\[
+P(\bar X > 44) \approx 0.84
+\]
+
+\subsubsection{המחשה גרפית מדויקת}
+
+\begin{center}
+\begin{english}
+\begin{tikzpicture}
+\begin{axis}[
+    no markers,
+    domain=30:80,
+    samples=200,
+    ymin=0, ymax=0.16, % גובה שמאפשר לגבעה הצרה להתנשא מעל הרחבה
+    axis lines=left,
+    width=0.85\textwidth,
+    height=6cm,
+    xlabel={Value},
+    ylabel={Density},
+    xlabel style={at={(ticklabel* cs:1)}, anchor=north west},
+    ylabel style={at={(ticklabel* cs:1)}, anchor=south west},
+    tick label style={font=\small},
+    legend style={at={(0.95,0.95)}, anchor=north east, font=\small},
+    xtick={44, 55},
+    xticklabels={44, $\mu$},
+    enlargelimits=false,
+    clip=true,
+    axis on top,
+    grid = major,
+    grid style={dashed, gray!20}
+]
+
+% פונקציית צפיפות נורמלית
+\def\gauss#1#2{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))}
+
+% ממוצע משותף לשתי ההתפלגויות
+\def\mval{55}
+
+% 1) אוכלוסייה: רחבה ונמוכה (סטיית תקן = 10)
+\addplot [name path=pop, blue, thick] {\gauss{\mval}{10}};
+\addlegendentry{Population ($n=1$)}
+
+% 2) מדגם: צרה וגבוהה (סטיית תקן = 3, המייצגת 10/sqrt(11) בקירוב)
+\addplot [name path=sample, red, thick] {\gauss{\mval}{3}};
+\addlegendentry{Sample Mean ($n=44$)}
+
+% ציר X למילוי שטחים
+\path[name path=axis] (axis cs:30,0) -- (axis cs:80,0);
+
+% צביעת השטח מימין ל-44 באוכלוסייה (56% מהשטח הכחול)
+\addplot [fill=blue, fill opacity=0.1] fill between [of=pop and axis, soft clip={domain=44:80}];
+
+% צביעת השטח מימין ל-44 במדגם (כמעט כל השטח האדום - כ-84%+)
+\addplot [fill=red, fill opacity=0.3] fill between [of=sample and axis, soft clip={domain=44:80}];
+
+% קו הפרדה בערך 44
+\draw [dashed, thick, black!60] (axis cs:44,0) -- (axis cs:44,0.14) node[pos=0.9, left, font=\footnotesize] {Value: 44};
+
+\end{axis}
+\end{tikzpicture}
+\end{english}
+\end{center}
+
+\textbf{שימי לב:} בחירה של \texttt{std\_pop=10} היא לצורכי המחשה בלבד;
+הצורה היחסית (הצרות של התפלגות הממוצעים והגדלת השטח מימין ל־$44$)
+אינה תלויה בערך המספרי המדויק של סטיית התקן.
+
+\subsubsection{משפט זהב}
+
+כאשר ערך נתון נמצא \textbf{מתחת לתוחלת האוכלוסייה},
+הצרות של התפלגות ממוצע המדגם גורמת לעלייה חדה
+בהסתברות שממוצע המדגם יהיה גדול מערך זה,
+וככל ש־$n$ גדל — האפקט מתחזק.
+
 \subsection{חישוב הסתברויות בהתפלגות הדגימה}
 
 כאשר התפלגות הדגימה נורמלית, ניתן לחשב ציוני תקן:
