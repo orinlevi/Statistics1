@@ -1,10 +1,10 @@
 site_name: סטטיסטיקה לפסיכולוגיה א'
 site_description: סיכום מקיף לקורס סטטיסטיקה לפסיכולוגיה א', אוניברסיטת תל אביב
 docs_dir: docs
-site_url: https://orinlevi.github.io/Statistics_1_sum/
+site_url: https://orinlevi.github.io/Statistics1/
 
-repo_name: Statistics_1_sum
-repo_url: https://github.com/orinlevi/Statistics_1_sum
+repo_name: Statistics1
+repo_url: https://github.com/orinlevi/Statistics1
 
 extra_css:
   - stylesheets/extra.css
@@ -12,7 +12,7 @@ extra_css:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/orinlevi/Statistics_1_sum
+      link: https://github.com/orinlevi/Statistics1
 
 theme:
   logo: assets/logo.png
