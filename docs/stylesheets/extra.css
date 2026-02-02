@@ -1,38 +1,5 @@
 /* === עיצוב מקצועי - סטטיסטיקה לפסיכולוגיה === */
 
-/* === RTL – כיוון ימין לשמאל (יחידות 12, 13 וכל האתר) === */
-html {
-  direction: rtl;
-}
-.md-typeset {
-  direction: rtl;
-  text-align: right;
-}
-/* נוסחאות ומתמטיקה נשארים LTR */
-.md-typeset .arithmatex,
-.md-typeset mjx-container {
-  direction: ltr;
-  text-align: left;
-}
-.md-typeset .formula-box .arithmatex,
-.md-typeset .formula-box mjx-container {
-  text-align: center;
-}
-/* טבלאות – כיוון RTL */
-.md-typeset table {
-  direction: rtl;
-}
-/* תיבות הערה (admonition) – RTL */
-.md-typeset .admonition {
-  direction: rtl;
-  text-align: right;
-}
-.md-typeset .admonition .arithmatex,
-.md-typeset .admonition mjx-container {
-  direction: ltr;
-  text-align: left;
-}
-
 /* צבעים פסטל */
 :root {
   --pastel-pink: #f4c2c2;
@@ -238,7 +205,7 @@ html {
 
 .definition-box {
   background: rgba(179, 229, 252, 0.1);
-  border-inline-start: 4px solid var(--pastel-blue);
+  border-right: 4px solid var(--pastel-blue);
   padding: 16px;
   margin: 16px 0;
   border-radius: 0 8px 8px 0;
@@ -246,7 +213,7 @@ html {
 
 .example-box {
   background: rgba(178, 223, 219, 0.1);
-  border-inline-start: 4px solid var(--pastel-mint);
+  border-right: 4px solid var(--pastel-mint);
   padding: 16px;
   margin: 16px 0;
   border-radius: 0 8px 8px 0;
@@ -254,7 +221,7 @@ html {
 
 .warning-box {
   background: rgba(255, 204, 188, 0.1);
-  border-inline-start: 4px solid var(--pastel-peach);
+  border-right: 4px solid var(--pastel-peach);
   padding: 16px;
   margin: 16px 0;
   border-radius: 0 8px 8px 0;
