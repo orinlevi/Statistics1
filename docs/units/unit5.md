@@ -193,7 +193,7 @@
 
 <div class="formula-box" markdown>
 
-\[P(\text{לפחות אחד}) = 1 - P(\text{אף אחד})\]
+\[P(\hebrew{לפחות אחד}) = 1 - P(\hebrew{אף אחד})\]
 
 </div>
 

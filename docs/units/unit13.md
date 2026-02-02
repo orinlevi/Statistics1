@@ -110,7 +110,7 @@
 
 <div class="formula-box" markdown>
 
-\[\text{אומדן} \pm \text{שגיאה}\]
+\[\hebrew{אומדן} \pm \hebrew{שגיאה}\]
 
 </div>
 

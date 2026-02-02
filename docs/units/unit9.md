@@ -44,7 +44,7 @@
 
 <div class="formula-box" markdown>
 
-\[\text{השטח מתחת לעקומה} = \text{הסתברות}\]
+\[\hebrew{השטח מתחת לעקומה} = \hebrew{הסתברות}\]
 
 </div>
 
