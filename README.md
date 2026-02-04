@@ -4,7 +4,7 @@
 
 ## צפייה באתר
 
-האתר זמין בכתובת: https://orinlevi.github.io/Statistics1/
+האתר זמין בכתובת: https://orinlevi-neurocspsy.github.io/Statistics1/
 
 ## תוכן
 
