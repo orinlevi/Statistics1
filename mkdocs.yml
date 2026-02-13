@@ -77,6 +77,9 @@ nav:
     - יחידה 11 - בדיקת השערות סטטיסטיות: units/unit11.md
     - יחידה 12 - טעויות סטטיסטיות ועוצמת המבחן: units/unit12.md
     - יחידה 13 - גודל אפקט ורווח סמך: units/unit13.md
+  - תרגול למבחן:
+    - שאלות ממבחנים: exams/questions.md
+    - דף נוסחאות (Cheat Sheet): exams/cheatsheet.md
   - נספחים:
     - סיכום הקורס: units/course_sum.md
     - טבלת Z: units/ztable.md
